@@ -1,0 +1,211 @@
+@import '../../styles/fonts.scss';
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  background-image: url('https://images.unsplash.com/photo-1504450758481-7338eba7524a?q=80');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  font-family: var(--font-secondary);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.90) 0%,
+      rgba(227, 30, 49, 0.80) 100%
+    );
+    z-index: 1;
+  }
+
+  &__box {
+    background: rgba(255, 255, 255, 0.97);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+    z-index: 3;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  &__logo {
+    width: 200px;
+    height: auto;
+    margin: 0 auto 2rem;
+    display: block;
+
+    path {
+      fill: #E31E31;
+    }
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__form-group {
+    margin-bottom: 1.2rem;
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+    font-family: var(--font-secondary);
+
+    &:focus {
+      outline: none;
+      border-color: #E31E31;
+      box-shadow: 0 0 0 3px rgba(227, 30, 49, 0.1);
+      background: white;
+    }
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.5);
+      font-family: var(--font-secondary);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  &__error {
+    color: #E31E31;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 500;
+    background: rgba(227, 30, 49, 0.1);
+    padding: 8px;
+    border-radius: 4px;
+    font-family: var(--font-secondary);
+  }
+
+  &__submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #E31E31;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(227, 30, 49, 0.2);
+    font-family: var(--font-primary);
+
+    &:hover {
+      background-color: #c71b2b;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 8px rgba(227, 30, 49, 0.3);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(227, 30, 49, 0.2);
+    }
+  }
+
+  &__divider {
+    text-align: center;
+    margin: 1.5rem 0;
+    position: relative;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 45%;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  &__google {
+    width: 100%;
+    padding: 12px;
+    background-color: white;
+    border: 2px solid #E31E31;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #E31E31;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    &:hover {
+      background-color: #fff5f5;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__google-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__toggle {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.9rem;
+    font-family: var(--font-secondary);
+  }
+
+  &__toggle-link {
+    color: #E31E31;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

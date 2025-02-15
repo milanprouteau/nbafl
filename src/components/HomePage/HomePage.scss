@@ -1,0 +1,100 @@
+@import '../../styles/fonts.scss';
+
+.home {
+  min-height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1504450758481-7338eba7524a?q=80');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  font-family: var(--font-secondary);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.90) 0%,
+      rgba(227, 30, 49, 0.80) 100%
+    );
+    z-index: 1;
+  }
+
+  &__header {
+    position: relative;
+    z-index: 2;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  &__logo {
+    width: 150px;
+    height: auto;
+
+    path {
+      fill: #E31E31;
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__email {
+    color: #1d1d1d;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  &__signout {
+    padding: 8px 16px;
+    background-color: #E31E31;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 4px rgba(227, 30, 49, 0.2);
+    font-family: var(--font-primary);
+
+    &:hover {
+      background-color: #c71b2b;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 6px rgba(227, 30, 49, 0.3);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(227, 30, 49, 0.2);
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}

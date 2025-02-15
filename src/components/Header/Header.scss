@@ -1,0 +1,107 @@
+@import '../../styles/fonts.scss';
+
+.header {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgba(227, 30, 49, 0.1);
+    }
+  }
+
+  &__logo {
+    height: 40px;
+    width: auto;
+    fill: #E31E31; // Using the red color for the logo
+    transition: fill 0.3s;
+
+    &:hover {
+      fill: #c71b2b;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__nav-link {
+    font-family: var(--font-primary);
+    text-decoration: none;
+    color: #1d1d1d;
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #E31E31;
+    }
+
+    &.active {
+      color: #E31E31;
+      font-weight: 700;
+    }
+  }
+
+  &__nav-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #E31E31;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover {
+      background-color: #c71b2b;
+      transform: translateY(-1px);
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 2rem;
+    padding-left: 2rem;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &__email {
+    font-family: var(--font-secondary);
+    font-size: 0.9rem;
+    color: #666;
+  }
+}
