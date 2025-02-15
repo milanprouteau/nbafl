@@ -1,5 +1,5 @@
-const API_KEY = '112d7ace24mshc7085d367f81ca8p1349cdjsnc7943afa4bb6'; // Replace with your actual API key
-const API_HOST = 'api-nba-v1.p.rapidapi.com';
+const API_KEY = process.env.REACT_APP_NBA_API_KEY;
+const API_HOST = process.env.REACT_APP_NBA_API_HOST;
 
 interface Game {
   id: number;
